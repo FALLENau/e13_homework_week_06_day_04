@@ -2,13 +2,13 @@ package jewellery;
 
 public class Ring {
 
-  private String metal;
+  private MetalType metal;
 
-  public Ring(String metal) {
+  public Ring(MetalType metal) {
     this.metal = metal;
   }
 
-  public String getMetal(){
+  public MetalType getMetal(){
     return this.metal;
   }
 

@@ -1,6 +1,6 @@
 package jewellery;
 
-public enu MetalType {
+public enum MetalType {
 
   GOLD,
   SILVER,

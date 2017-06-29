@@ -8,24 +8,24 @@ public class RingTest {
 
   @Before
   public void before(){
-    ring = new Ring("Gold");
+    ring = new Ring(MetalType.GOLD);
   }
 
   @Test
   public void canGetMetal(){
-    assertEquals("Gold",ring.getMetal());
+    assertEquals(MetalType.GOLD,ring.getMetal());
   }
 
-  @Test
-  public void metalCanBeMispelled() {
-    ring = new Ring("Golf");
-    assertEquals("golf", ring.getMetal());
-  }
-
-  @Test
-  public void metalCanBeNonsense() {
-    ring = new Ring("Onion");
-    assertEquals("Onion", ring.getMetal());
-  }
+  // @Test
+  // public void metalCanBeMispelled() {
+  //   ring = new Ring("Golf");
+  //   assertEquals("golf", ring.getMetal());
+  // }
+  //
+  // @Test
+  // public void metalCanBeNonsense() {
+  //   ring = new Ring("Onion");
+  //   assertEquals("Onion", ring.getMetal());
+  // }
 
 }
