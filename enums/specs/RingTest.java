@@ -7,13 +7,18 @@ public class RingTest {
   Ring ring;
 
   @Before
-  public void before(){
-    ring = new Ring(MetalType.GOLD);
+  public void before() {
+    ring = new Ring(MetalType.GOLD, GemType.RUBY);
   }
 
   @Test
-  public void canGetMetal(){
-    assertEquals(MetalType.GOLD,ring.getMetal());
+  public void canGetMetal() {
+    assertEquals(MetalType.GOLD, ring.getMetal());
+  }
+
+  @Test
+  public void canGetGem() {
+    assertEquals(GemType.RUBY, ring.getGem());
   }
 
   // @Test
