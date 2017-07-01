@@ -3,9 +3,14 @@ public class ExampleTryCatch{
 
   public void run(){
     setup();
-    Pet found = shop.findPetByName("Meowingtons");
+
+    try {
+    Pet found = shop.findPetByName("null");
     System.out.println("Found pet: " + found.getName());
+  } catch(NullStringException ex) {
+    System.out.println(ex.getMessage());
   }
+}
 
   public void setup(){
     shop = new PetShop();

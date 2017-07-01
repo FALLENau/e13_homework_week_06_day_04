@@ -8,7 +8,12 @@ public class PetShop{
     stock = new ArrayList<Pet>();
   }
 
-  public Pet findPetByName(String searchName) {    
+  public Pet findPetByName(String searchName) throws NullStringException {
+
+    if(searchName == null) {
+      throw new NullStringException("Not a valid searchName. You gace me null");
+    }
+
     String searchLower = searchName.toLowerCase();
     for (Pet pet : stock){
       String petName = pet.getName().toLowerCase();
